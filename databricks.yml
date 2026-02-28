@@ -1,0 +1,11 @@
+bundle:
+  name: house-hunt-rent-airbnb
+
+
+include:
+  - resources/*.yml
+  
+targets:
+  dev:
+    workspace:
+      host: https://dbc-941ee355-78d4.cloud.databricks.com

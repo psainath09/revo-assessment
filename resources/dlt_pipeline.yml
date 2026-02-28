@@ -1,0 +1,17 @@
+# resources:
+#   pipelines:
+#     housing_medallion_dlt:
+#       name: housing-medallion-dlt-pipeline
+#       pipeline_settings:
+#         storage: dbfs:/Volumes/housing_pipeline/storage
+#         target: housing
+#         continuous: true
+#         clusters:
+#            - label: serverless
+#         development: true
+#       libraries:
+#         - pypi:
+#             package: "dlt"
+#       notebooks:
+#         - path: ../notebooks/housing_dlt.py
+#           main: true
