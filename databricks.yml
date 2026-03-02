@@ -1,11 +1,24 @@
 bundle:
   name: house-hunt-rent-airbnb
 
+sync:
+  include:
+    - "notebooks/**"
+    - "resources/**"
+    - "tests/**"
+    - "data/**"
+  exclude:
+    - ".github/**"
+    - "__pycache__/**"
+    - "*.pyc"
 
 include:
   - resources/*.yml
-  
+
 targets:
   dev:
     workspace:
       host: https://dbc-941ee355-78d4.cloud.databricks.com
+      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+      artifact_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}/artifacts
+      file_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
